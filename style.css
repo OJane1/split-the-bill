@@ -1,0 +1,150 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAyfHxtZWFsfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color:rgba(94, 97, 93, 0.9);
+    }
+
+#container {
+    background-color:rgba(255, 187, 92, 0.9);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 725px;
+    border-radius: 40px;
+    color: white;
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    color: black;
+}
+
+h1, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #C63D2F;
+    align-self: center; 
+}
+
+.bill-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif; 
+    padding: 5px;
+    max-width: 20%;
+    margin: 2px;
+    border: none;
+}
+
+#bill::placeholder, #people::placeholder {
+    text-align: end;
+}
+
+#tip {
+    font-family: 'Montserrat', sans-serif;
+    display: none; 
+} 
+
+#addTip, #btn {
+    background-color:#116D6E;
+    color: #EEE2DE;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+    
+#showTotalAmountToPay {
+    display: flex;
+}
+
+#billSplit, #totalTip, #totalAmount {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: #EEE2DE;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #116D6E;
+    color: #000000;
+}
+
+.rounding {
+    display: flex;
+    justify-content: center;
+    
+    }
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee2de;
+    border-radius: 5px;
+    border: 1px solid #116D6E;
+  }
+
+  .checkbox input:checked ~ .checkmark {
+    background-color: #116D6E;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  @media all and (max-width: 800px) {
+    #container {
+        height: auto;
+    }
+  }
