@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div id="container">
+         <h1>Split your bill easily!</h1>
+         <form>
+            <div class="bill-info">
+               <p>Subtotal</p>
+               <input id="bill" type="text" placeholder="0.00">
+            </div>
+            <div class="bill-info">
+               <p>Number of people</p>
+               <input id="people" type="text" placeholder="x ppl">
+            </div>
+            <button id="addTip">Add a tip</button>
+            <select id="tip">
+               <option disabled value="">Select an option</option>
+               <option selected value="0.00">No tip</option>
+               <option value="0.05">5%</option>
+               <option value="0.10">10%</option>
+               <option value="0.15">15%</option>
+            </select>
+            <button id="btn">Calculate</button>
+         </form>
+         <div id="showTotalAmountToPay">
+            <div id="billSplit">
+               <p>Bill</p>
+               <span>$</span>
+               <span id="dividedBill"></span>
+               <span>per person</span>
+            </div>
+            <div id="totalTip">
+               <p>Tip</p>
+               <span>$</span>
+               <span id="dividedTip"></span>
+               <span>per person</span>
+            </div>
+            <div id="totalAmount">
+               <p>Total</p>
+               <span>$</span>
+               <span id="totalSum"></span>
+               <span>per person</span>
+            </div>
+         </div>
+         <div class="rounding">
+            <h3>Round to grand total:</h3>
+            <label class="checkbox">
+            <input type="checkbox" id="roundTotal">
+            <span class="checkmark"></span>
+            </label>  
+         </div>
+      </div>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <script src="script.js"></script>
+   </body>
+</html>
